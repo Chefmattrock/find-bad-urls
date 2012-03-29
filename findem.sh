@@ -1,7 +1,7 @@
 #!/bin/bash
 
 output="bad.log"
-echo "Starting Tests for $1..." >> $output
+echo "starting tests for $1..." >> $output
 counter=0
 for url in `cat $1`
 do
