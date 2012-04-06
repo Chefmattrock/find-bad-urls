@@ -1,6 +1,16 @@
 #!/bin/bash
 
-output="bad.log"
+if ! [ $1 ]; then
+	echo "usage: findem.sh <url_file> [output_file]"
+	exit
+fi
+
+if [ "$#" -eq 2 ]; then
+	output=$2
+else
+	output="bad.log"
+fi
+
 echo "starting tests for $1 at `date -u +%s`000" >> $output
 counter=0
 for url in `cat $1`
