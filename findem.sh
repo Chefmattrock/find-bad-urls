@@ -11,7 +11,7 @@ else
 	output="bad.log"
 fi
 
-echo "starting tests for $1 at `date -u +%s`000" >> $output
+echo "starting tests for $1 at `date -u +%s`000" | tee -a $output
 counter=0
 for url in `cat $1`
 do
